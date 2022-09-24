@@ -37,4 +37,10 @@ export class ShoppingListService {
     this.ingredients[index] = newIngredient;
     this.ingredientsChanged.next(this.ingredients.slice());
   }
+
+  deleteIngredient(index: number) {
+    //this deletes an ingredient from the array with the splice method, it starts at the index and deletes 1 item.
+    this.ingredients.splice(index, 1);
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
 }
