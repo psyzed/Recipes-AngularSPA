@@ -27,8 +27,14 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: Ingredient[]) {
-    //addind multiple ingredients and nexting that the ingredients array has changed!
+    //adding multiple ingredients and nexting that the ingredients array has changed!
     this.ingredients.push(...ingredients);
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  upDateIngredient(index: number, newIngredient: Ingredient) {
+    //updating the ingredient and nexting a copy of it
+    this.ingredients[index] = newIngredient;
     this.ingredientsChanged.next(this.ingredients.slice());
   }
 }
