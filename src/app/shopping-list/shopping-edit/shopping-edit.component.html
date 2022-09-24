@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <form (ngSubmit)="onAddItem(shoppingListForm)" #shoppingListForm="ngForm">
+    <form (ngSubmit)="onSubmit(shoppingListForm)" #shoppingListForm="ngForm">
       <div class="row">
         <div class="col-sm-5 form-group">
           <label for="name">Name</label>
@@ -40,13 +40,7 @@
           <button class="btn btn-danger" type="button" [disabled]="!editMode">
             Delete
           </button>
-          <button
-            class="btn btn-primary"
-            type="button"
-            [disabled]="shoppingListForm.pristine"
-          >
-            Clear
-          </button>
+          <button class="btn btn-primary" type="button">Clear</button>
         </div>
       </div>
     </form>
