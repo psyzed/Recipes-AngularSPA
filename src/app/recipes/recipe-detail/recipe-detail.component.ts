@@ -36,5 +36,7 @@ export class RecipeDetailComponent implements OnInit {
     }); //the alternative way of navigating with a more complex route
   }
 
-  onDeleteRecipe() {}
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.recipeId);
+  }
 }
