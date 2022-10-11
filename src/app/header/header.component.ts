@@ -9,9 +9,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 export class HeaderComponent implements OnInit {
   constructor(private dataStorageService: DataStorageService) {}
 
-  ngOnInit(): void {
-    // this.dataStorageService.fetchRecipes().subscribe();
-  }
+  ngOnInit(): void {}
 
   onSaveData() {
     this.dataStorageService.storeRecipes();
