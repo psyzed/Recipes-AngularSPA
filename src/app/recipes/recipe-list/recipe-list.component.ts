@@ -24,7 +24,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.dataStorageService.fetchRecipes().subscribe();
+    // this.dataStorageService.fetchRecipes().subscribe(); This throws an error about the token!
     this.recipes = this.recipeService.getRecipes();
     this.recipesChangedSubscription =
       this.recipeService.recipesChanged.subscribe((recipes: Recipe[]) => {
